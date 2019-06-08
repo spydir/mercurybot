@@ -2,7 +2,10 @@
 
 from pyautogui import press, moveTo, click, size
 
-import imagesearch, time
+import imagesearch, time, random, decimal
+from PIL import Image
+
+
 
 def keyboard(key):
     press(key)
@@ -12,10 +15,16 @@ def keyboard(key):
     # click(x=moveToX, y=moveToY, clicks=num_of_clicks, interval=secs_between_clicks, button='left')
 
 def imageFind(image):
+    im = Image.open(image)
+    width, height = im.size
+    pause = decimal.Decimal(random.randrange(30,70))/100
+    print(pause)
 
     timeout = time.time() + 30  # 15 seconds from now
     while True:
         pos = imagesearch.imagesearch(image)
+        x = ((pos[0]/2)+(width/4))
+        y = ((pos[1]/2)+(height/4))
         test = 0
         if test == 5 or time.time() > timeout:
             break
@@ -23,9 +32,9 @@ def imageFind(image):
 
         if pos[0] != -1:
             print("position : ", pos[0]/2, pos[1])
-            moveTo(((pos[0]/2)+30), ((pos[1]/2)+12),duration=.2)
-            time.sleep(1) #need to make this random
-            click((pos[0]/2)+30, (pos[1]/2)+12) #need to change this to 1/2 image size
+            moveTo(x, y, duration=.2)
+            time.sleep(pause)
+            click(x, y)
             break
         else:
             print("image not found")
