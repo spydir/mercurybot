@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda4624b-3c4c-4a5a-8948-03cc8b45cea9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ftl/ftl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interactions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mechanics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/steam/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/steam/steam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/001-CONTINUE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/004-EASY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/004-HARD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/004-NORMAL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/005-ADVANCED-DISABLED.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/005-ADVANCED-ENABLED.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/006-JUMP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-ADVANCED-DISABLED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-ADVANCED-DISABLED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-ADVANCED-ENABLED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-ADVANCED-ENABLED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-CONFIRM.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-CONFIRM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-CONTINUE.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-CONTINUE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-DIF-EASY.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-DIF-EASY.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-DIF-HARD.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-DIF-HARD.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-DIF-NORMAL.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-DIF-NORMAL.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-JUMP-ROUTE.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-JUMP-ROUTE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-JUMP.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-JUMP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-NEWGAME.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-NEWGAME.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-START.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-START.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-WAYPOINT-VISITED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-WAYPOINT-VISITED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FTL-WAYPOINT.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-WAYPOINT.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FUEL-16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FUEL-16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/FUEL16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FUEL16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-CLOSE-ADDS.png" beforeDir="false" afterPath="$PROJECT_DIR$/steam/img/STEAM-CLOSE-ADDS.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-DOWN-ARROW.png" beforeDir="false" afterPath="$PROJECT_DIR$/steam/img/STEAM-DOWN-ARROW.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-FTL-GAME.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/FTL-GAME-LISTING.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-ICON.png" beforeDir="false" afterPath="$PROJECT_DIR$/steam/img/STEAM-ICON.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-LIBRARY.png" beforeDir="false" afterPath="$PROJECT_DIR$/steam/img/STEAM-LIBRARY.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FTL/STEAM-PLAY.png" beforeDir="false" afterPath="$PROJECT_DIR$/steam/img/STEAM-PLAY.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ftl/ftl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/ftl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-GAME-LISTING.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagesearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/imagesearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/mbot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mechanics.py" beforeDir="false" afterPath="$PROJECT_DIR$/mechanics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steam/steam.py" beforeDir="false" afterPath="$PROJECT_DIR$/steam/steam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="209">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -60,11 +33,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state relative-caret-position="608">
+              <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
-                <element signature="e#125#1159#0" />
+                <element signature="e#153#1025#0" />
               </folding>
             </state>
           </provider>
@@ -73,17 +46,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steam/steam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-line="1" />
+            <state relative-caret-position="551">
+              <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imagesearch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="84" selection-start-line="82" selection-start-column="3" selection-end-line="84" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#75#286#1" />
+                <element signature="e#319#465#0" />
+                <element signature="e#468#986#1" />
+                <element signature="e#1057#1566#0" />
+                <element signature="e#1569#2240#1" />
+                <element signature="e#2519#2939#1" />
+                <element signature="e#2983#3498#0" />
+                <element signature="e#3543#4053#0" />
+                <element signature="e#3501#3885#1" />
+                <element signature="e#3946#4138#0" />
+                <element signature="e#4140#4621#1" />
+                <element signature="e#4697#4976#0" />
+                <element signature="e#4978#5465#1" />
+                <element signature="e#5549#5736#0" />
+                <element signature="e#5738#6147#1" />
+                <element signature="e#6197#6933#0" />
+                <element signature="e#6983#7476#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interactions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="455">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding>
+                <element signature="e#1#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -91,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mechanics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="19">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#27#177#0" />
                 <element signature="e#203#207#0" />
@@ -136,17 +144,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/imagesearch.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/FTL/metrics.py" />
         <option value="$PROJECT_DIR$/metrics.py" />
         <option value="$PROJECT_DIR$/FTL/interactions.py" />
         <option value="$PROJECT_DIR$/FTL/ftl.py" />
+        <option value="$PROJECT_DIR$/mechanics.py" />
+        <option value="$PROJECT_DIR$/steam/steam.py" />
+        <option value="$PROJECT_DIR$/imagesearch.py" />
+        <option value="$PROJECT_DIR$/interactions.py" />
         <option value="$PROJECT_DIR$/ftl/ftl.py" />
         <option value="$PROJECT_DIR$/mbot.py" />
-        <option value="$PROJECT_DIR$/steam/steam.py" />
-        <option value="$PROJECT_DIR$/mechanics.py" />
-        <option value="$PROJECT_DIR$/interactions.py" />
       </list>
     </option>
   </component>
@@ -198,6 +206,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -308,61 +317,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="e#1#25#0" expanded="true" />
-            <element signature="e#125#1159#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steam/steam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagesearch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1367">
-          <caret line="217" column="35" selection-start-line="217" selection-start-column="35" selection-end-line="217" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#1057#1566#0" />
-            <element signature="e#1569#2240#1" />
-            <element signature="e#2303#2516#0" />
-            <element signature="e#2519#2939#1" />
-            <element signature="e#2988#3475#0" />
-            <element signature="e#3474#3858#1" />
-            <element signature="e#3919#4111#0" />
-            <element signature="e#4113#4594#1" />
-            <element signature="e#4670#4949#0" />
-            <element signature="e#4951#5438#1" />
-            <element signature="e#5522#5709#0" />
-            <element signature="e#5711#6120#1" />
-            <element signature="e#6198#6971#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mechanics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#27#177#0" />
             <element signature="e#203#207#0" />
@@ -375,8 +333,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interactions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="455">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+          <folding>
+            <element signature="e#1#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steam/steam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" selection-start-line="29" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imagesearch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="84" selection-start-line="82" selection-start-column="3" selection-end-line="84" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#75#286#1" />
+            <element signature="e#319#465#0" />
+            <element signature="e#468#986#1" />
+            <element signature="e#1057#1566#0" />
+            <element signature="e#1569#2240#1" />
+            <element signature="e#2519#2939#1" />
+            <element signature="e#2983#3498#0" />
+            <element signature="e#3543#4053#0" />
+            <element signature="e#3501#3885#1" />
+            <element signature="e#3946#4138#0" />
+            <element signature="e#4140#4621#1" />
+            <element signature="e#4697#4976#0" />
+            <element signature="e#4978#5465#1" />
+            <element signature="e#5549#5736#0" />
+            <element signature="e#5738#6147#1" />
+            <element signature="e#6197#6933#0" />
+            <element signature="e#6983#7476#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+          <folding>
+            <element signature="e#1#25#0" expanded="true" />
+            <element signature="e#153#1025#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

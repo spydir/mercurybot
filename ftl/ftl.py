@@ -1,6 +1,7 @@
 
 import imagesearch, math
 from interactions import image_find
+from pyautogui import click
 from mechanics import compass_bearing
 
 
@@ -22,13 +23,7 @@ def jump_routes():
         waypoint_info.append(distance)
         possible_waypoints.append(waypoint_info)
 
-    print('visited waypoints:')
-    for i in visited_waypoints:
-        print(i)
-
-    print('future waypoints:')
-    for i in future_waypoints:
-        print(i)
+    return visited_waypoints, future_waypoints, possible_waypoints
 
     #match route bearings to waypoint bearings
 
@@ -36,21 +31,29 @@ def jump_routes():
 def start_game():
     # select ftl
 
-    #select newgame
-    image_find("./ftl/img/ftl-NEWGAME.png")
+    # select newgame
+    image_find("./ftl/img/ftl-NEWGAME.png", clicky=True)
 
-    #confirm newgame
-    image_find("./ftl/img/ftl-CONFIRM.png")
+    # confirm newgame
+    image_find("./ftl/img/ftl-CONFIRM.png",clicky=True)
 
-    #Start newgame
-    image_find("./ftl/img/ftl-START.png")
+    # Start newgame
+    image_find("./ftl/img/ftl-START.png",clicky=True)
 
-    #Continue New Game
-    image_find("./ftl/img/ftl-CONTINUE.png")
+    # Continue New Game
+    image_find("./ftl/img/ftl-CONTINUE.png",clicky=True)
 
-    #Jump!
-    image_find("./ftl/img/ftl-JUMP.png")
+    # Jump!
+    image_find("./ftl/img/ftl-JUMP.png",clicky=True)
 
-    image_find("./ftl/img/ftl-WAYPOINT.png")
+    visited, future, possible = jump_routes()
+
+    for i in future:
+        click(i[0]/2,i[1]/2,1,.6,'left')
+        if imagesearch.imagesearch("./ftl/img/ftl-WAYPOINT.png") == False:
+            break
+
+
+    # image_find("./ftl/img/ftl-WAYPOINT.png",clicky=True)
 
 
