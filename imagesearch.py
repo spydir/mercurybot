@@ -111,7 +111,6 @@ def imagesearch(image, precision=0.8):
     return max_loc
 
 
-
 '''
 Searchs for an image on screen continuously until it's found.
 
@@ -201,12 +200,33 @@ def imagesearch_count(image, precision=0.9):
     w, h = template.shape[::-1]
     res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
     loc = np.where(res >= precision)
+
+    for i in range(0,len(loc[0])):
+        print(loc[0][i],loc[1][i])
+
     count = 0
     for pt in zip(*loc[::-1]):  # Swap columns and rows
-        #cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0, 0, 255), 2) // Uncomment to draw boxes around found occurances
+        # cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0, 0, 255), 2) #// Uncomment to draw boxes around found occurances
         count = count + 1
-    #cv2.imwrite('result.png', img_rgb) // Uncomment to write output image with boxes drawn around occurances
+    # cv2.imwrite('result'+str(count)+'.png', img_rgb) #// Uncomment to write output image with boxes drawn around occurances
     return count
+
+def imagesearch_list(image, precision=0.9):
+    img_rgb = pyautogui.screenshot()
+    img_rgb = np.array(img_rgb)
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+    template = cv2.imread(image, 0)
+    res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+    loc = np.where(res >= precision)
+    image_locations = []
+    coords = []
+
+    for i in range(0,len(loc[0])):
+        coords = []
+        coords.append(loc[1][i])
+        coords.append(loc[0][i])
+        image_locations.append(coords)
+    return image_locations
 
 def r(num, rand):
     return num + rand*random.random()
