@@ -1,16 +1,17 @@
 
-import imagesearch, math
+import imagesearch, math, time, decimal, random, datetime,os
+from steam import steam
 from interactions import image_find
-from pyautogui import click
+from pyautogui import click,moveTo
 from mechanics import compass_bearing
 
 
+
+
 def jump_routes():
-    future_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT.png", .8)
-    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT-VISITED.png",.8)
-    # jump_routes = imagesearch.imagesearch_list("./ftl/img/ftl-JUMP-ROUTE.png",.9)
+    future_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT.png", .9)
+    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT-VISITED.png",.9)
     possible_waypoints = []
-    route_bearings = []
     current_waypoint = tuple(visited_waypoints[-1])
 
     #get waypoints with bearing and distance
@@ -43,17 +44,65 @@ def start_game():
     # Continue New Game
     image_find("./ftl/img/ftl-CONTINUE.png",clicky=True)
 
+
+def play_game():
+
     # Jump!
     image_find("./ftl/img/ftl-JUMP.png",clicky=True)
 
     visited, future, possible = jump_routes()
 
     for i in future:
-        click(i[0]/2,i[1]/2,1,.6,'left')
+        click(i[0]/2, i[1]/2, 1, .6, 'left')
+        print( datetime.datetime.now(), i,"Waypoint clicked")
+
+        pause = decimal.Decimal(random.randrange(52, 87)) / 100
+        time.sleep(pause)
         if imagesearch.imagesearch("./ftl/img/ftl-WAYPOINT.png") == False:
+            print( datetime.datetime.now(), i, "Successful Jump!")
+
+            time.sleep(decimal.Decimal(random.randrange(500, 800)) / 100)
+            print( datetime.datetime.now(),"Looking for Target.", i)
+
+            if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == True:
+
+                print( datetime.datetime.now(),"Ship Encountered!", i)
+                #capture region 526x418
+                save('ship_encounters',imagesearch.region_grabber([526, 418,1730,1172]))
+
+            time.sleep(decimal.Decimal(random.randrange(25, 39)) / 100)
+            if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == False:
+                print( datetime.datetime.now(), i, "No Ship Encountered")
+                #capture region 825x418
+                save('no_ship_encounters',imagesearch.region_grabber([825, 418,2030,1172]))
+            restart_game()
+            break
+        print( datetime.datetime.now(), i, "Failed Jump")
+        if i == future[-1]:
+            restart_game()
             break
 
 
     # image_find("./ftl/img/ftl-WAYPOINT.png",clicky=True)
 
 
+def exit_game():
+    print(datetime.datetime.now(), "Clicking Exit")
+    moveTo(186/2,102/2,.3)
+    time.sleep(3)
+    click(186/2,102/2,1,.2)
+
+
+def restart_game():
+    exit_game()
+    steam.start_steam()
+    start_game()
+    play_game()
+
+
+def save(index, image): # here index is the class of the image eg 2,3 etc
+    mypath = str("images/" + index)
+    files = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+    file_id = files.__len__()
+    filename = mypath + "/" + str(file_id + 1) + ".png"
+    image.save(filename)

@@ -17,7 +17,7 @@ def image_find(image,clicky=False):
     im = Image.open(image)
     width, height = im.size
     pause = decimal.Decimal(random.randrange(35,90))/100
-    print(pause)
+    # print(pause)
 
     timeout = time.time() + 17  # 17 seconds from now
     while True:
@@ -33,7 +33,7 @@ def image_find(image,clicky=False):
         test = test - 1
 
         if pos[0] != -1:
-            print("x and y : ", x, y)
+            # print("x and y : ", x, y)
 
             time.sleep(pause)
             if clicky == True:

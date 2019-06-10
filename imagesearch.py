@@ -15,13 +15,13 @@ input : a tuple containing the 4 coordinates of the region to capture
 output : a PIL image of the area selected.
 
 '''
-def region_grabber(region):
+def region_grabber(region,filename=None):
     x1 = region[0]
     y1 = region[1]
     width = region[2]-x1
     height = region[3]-y1
 
-    return pyautogui.screenshot(region=(x1,y1,width,height))
+    return pyautogui.screenshot(filename,region=(x1,y1,width,height))
 
 
 '''
@@ -100,7 +100,7 @@ the top left corner coordinates of the element if found as an array [x,y] or [-1
 
 '''
 def imagelocate(image, precision=0.8):
-    print(pyautogui.size())
+    # print(pyautogui.size())
     im = pyautogui.screenshot()
     #im.save('testarea.png') usefull for debugging purposes, this will save the captured region as "testarea.png"
     img_rgb = np.array(im)
@@ -116,7 +116,7 @@ def imagelocate(image, precision=0.8):
 
 
 def imagesearch(image, precision=0.8):
-    print(pyautogui.size())
+    # print(pyautogui.size())
     im = pyautogui.screenshot()
     #im.save('testarea.png') usefull for debugging purposes, this will save the captured region as "testarea.png"
     img_rgb = np.array(im)
