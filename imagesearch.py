@@ -15,13 +15,13 @@ input : a tuple containing the 4 coordinates of the region to capture
 output : a PIL image of the area selected.
 
 '''
-def region_grabber(region):
+def region_grabber(region,filename=None):
     x1 = region[0]
     y1 = region[1]
     width = region[2]-x1
     height = region[3]-y1
 
-    return pyautogui.screenshot(region=(x1,y1,width,height))
+    return pyautogui.screenshot(filename,region=(x1,y1,width,height))
 
 
 '''
@@ -74,11 +74,15 @@ action : button of the mouse to activate : "left" "right" "middle", see pyautogu
 time : time taken for the mouse to move from where it was to the new position
 '''
 
-def click_image(image,pos,  action, timestamp,offset=5):
+def click_image(image, pos, action, timestamp, offset=5):
     img = cv2.imread(image)
     height, width, channels = img.shape
-    pyautogui.moveTo(pos[0] + r(width / 2, offset), pos[1] + r(height / 2,offset),
+    # pyautogui.moveTo(pos[0] + r(width / 2, offset), pos[1] + r(height / 2, offset),
+    #                  timestamp)
+
+    pyautogui.moveTo(pos[0]/2 + r(width / 2, offset), pos[1]/2 + r(height / 2, offset),
                      timestamp)
+
     pyautogui.click(button=action)
 
 
@@ -95,8 +99,8 @@ returns :
 the top left corner coordinates of the element if found as an array [x,y] or [-1,-1] if not
 
 '''
-def imagesearch(image, precision=0.8):
-    print(pyautogui.size())
+def imagelocate(image, precision=0.8):
+    # print(pyautogui.size())
     im = pyautogui.screenshot()
     #im.save('testarea.png') usefull for debugging purposes, this will save the captured region as "testarea.png"
     img_rgb = np.array(im)
@@ -109,6 +113,22 @@ def imagesearch(image, precision=0.8):
     if max_val < precision:
         return [-1,-1]
     return max_loc
+
+
+def imagesearch(image, precision=0.8):
+    # print(pyautogui.size())
+    im = pyautogui.screenshot()
+    #im.save('testarea.png') usefull for debugging purposes, this will save the captured region as "testarea.png"
+    img_rgb = np.array(im)
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+    template = cv2.imread(image, 0)
+    template.shape[::-1]
+
+    res = cv2.matchTemplate(img_gray, template, cv2.TM_CCOEFF_NORMED)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+    if max_val < precision:
+        return False
+    return True
 
 
 '''
@@ -124,12 +144,13 @@ the top left corner coordinates of the element if found as an array [x,y]
 
 '''
 def imagesearch_loop(image, timesample, precision=0.8):
-    pos = imagesearch(image, precision)
+    pos = imagelocate(image, precision)
     while pos[0] == -1:
         print(image+" not found, waiting")
         time.sleep(timesample)
-        pos = imagesearch(image, precision)
+        pos = imagelocate(image, precision)
     return pos
+
 
 '''
 Searchs for an image on screen continuously until it's found or max number of samples reached.
@@ -145,16 +166,17 @@ the top left corner coordinates of the element if found as an array [x,y]
 
 '''
 def imagesearch_numLoop(image, timesample, maxSamples, precision=0.8):
-    pos = imagesearch(image, precision)
+    pos = imagelocate(image, precision)
     count = 0
     while pos[0] == -1:
         print(image+" not found, waiting")
         time.sleep(timesample)
-        pos = imagesearch(image, precision)
+        pos = imagelocate(image, precision)
         count = count + 1
         if count>maxSamples:
             break
     return pos
+
 
 '''
 Searchs for an image on a region of the screen continuously until it's found.
@@ -179,6 +201,7 @@ def imagesearch_region_loop(image, timesample, x1, y1, x2, y2, precision=0.8):
         time.sleep(timesample)
         pos = imagesearcharea(image, x1, y1, x2, y2, precision)
     return pos
+
 
 '''
 Searches for an image on the screen and counts the number of occurrences.
@@ -211,6 +234,7 @@ def imagesearch_count(image, precision=0.9):
     # cv2.imwrite('result'+str(count)+'.png', img_rgb) #// Uncomment to write output image with boxes drawn around occurances
     return count
 
+
 def imagesearch_list(image, precision=0.9):
     img_rgb = pyautogui.screenshot()
     img_rgb = np.array(img_rgb)
@@ -227,6 +251,7 @@ def imagesearch_list(image, precision=0.9):
         coords.append(loc[0][i])
         image_locations.append(coords)
     return image_locations
+
 
 def r(num, rand):
     return num + rand*random.random()
