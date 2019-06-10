@@ -1,9 +1,10 @@
 
-import imagesearch, math, time, decimal, random, datetime,os
+import imagesearch, math, time, decimal, random, datetime, os, logging
 from steam import steam
 from interactions import image_find
 from pyautogui import click,moveTo
 from mechanics import compass_bearing
+
 
 
 
@@ -54,30 +55,30 @@ def play_game():
 
     for i in future:
         click(i[0]/2, i[1]/2, 1, .6, 'left')
-        print( datetime.datetime.now(), i,"Waypoint clicked")
+        logging.info("{} Waypoint Clicked ".format(i))
 
         pause = decimal.Decimal(random.randrange(52, 87)) / 100
         time.sleep(pause)
         if imagesearch.imagesearch("./ftl/img/ftl-WAYPOINT.png") == False:
-            print( datetime.datetime.now(), i, "Successful Jump!")
+            logging.info("{} Successful Jump! ".format(i))
 
             time.sleep(decimal.Decimal(random.randrange(500, 800)) / 100)
-            print( datetime.datetime.now(),"Looking for Target.", i)
+            logging.info("{} Looking for Target.".format(i))
 
             if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == True:
 
-                print( datetime.datetime.now(),"Ship Encountered!", i)
+                logging.info("{} Ship Encountered. ".format(i))
                 #capture region 526x418
                 save('ship_encounters',imagesearch.region_grabber([526, 418,1730,1172]))
 
             time.sleep(decimal.Decimal(random.randrange(25, 39)) / 100)
             if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == False:
-                print( datetime.datetime.now(), i, "No Ship Encountered")
+                logging.info("{} No Ship Encountered. ".format(i))
                 #capture region 825x418
                 save('no_ship_encounters',imagesearch.region_grabber([825, 418,2030,1172]))
             restart_game()
             break
-        print( datetime.datetime.now(), i, "Failed Jump")
+        logging.info("{} Failed Jump. ".format(i))
         if i == future[-1]:
             restart_game()
             break
@@ -87,7 +88,7 @@ def play_game():
 
 
 def exit_game():
-    print(datetime.datetime.now(), "Clicking Exit")
+    logging.info("Clicking Exit.")
     moveTo(186/2,102/2,.3)
     time.sleep(3)
     click(186/2,102/2,1,.2)

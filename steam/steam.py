@@ -2,9 +2,28 @@
 from pyautogui import moveTo
 from imagesearch import imagesearch
 from interactions import image_find
+import logging, os
+
+
+def logs():
+    mypath = str("logs/")
+    files = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+    file_id = files.__len__()
+    fname = mypath + "/" + str(file_id + 1) + ".log"
+
+    logging.basicConfig(
+        filename=fname,
+        level=logging.INFO,
+        format="%(asctime)s:%(levelname)s:%(message)s"
+        )
 
 
 def start_steam():
+    logging.shutdown()
+
+
+    logs()
+
     # check to see if steam is open
         # Are the game string and play buttons visible?
     if imagesearch("./ftl/img/FTL-STEAM-GAME-STRING.png") == True:
@@ -29,3 +48,4 @@ def start_steam():
 
     # press play
     image_find("./steam/img/STEAM-PLAY.png",clicky=True)
+
