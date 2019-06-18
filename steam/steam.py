@@ -10,23 +10,21 @@ def logs():
     files = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     file_id = files.__len__()
     fname = mypath + "/" + str(file_id + 1) + ".log"
-
     logging.basicConfig(
         filename=fname,
         level=logging.INFO,
-        format="%(asctime)s:%(levelname)s:%(message)s"
+        format="%(asctime)s:%(levelname)s:%(message)s",
+        filemode = 'w'
         )
 
 
 def start_steam():
-    logging.shutdown()
-
 
     logs()
 
     # check to see if steam is open
         # Are the game string and play buttons visible?
-    if imagesearch("./ftl/img/FTL-STEAM-GAME-STRING.png") == True:
+    if imagesearch("./ftl/img/steam/FTL-STEAM-GAME-STRING.png") == True:
         image_find("./steam/img/STEAM-PLAY.png", clicky=True)
 
         # if not, is the game listing visible?
@@ -44,7 +42,7 @@ def start_steam():
     image_find("./steam/img/STEAM-LIBRARY.png",clicky=True)
 
     # select ftl
-    image_find("./ftl/img/FTL-STEAM-GAME-LISTING.png", clicky=True)
+    image_find("./ftl/img/steam/FTL-STEAM-GAME-LISTING.png", clicky=True)
 
     # press play
     image_find("./steam/img/STEAM-PLAY.png",clicky=True)

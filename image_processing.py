@@ -5,7 +5,6 @@ from PIL import Image
 directory = 'images/no_ship_encounters/'
 
 
-
 for filename in os.listdir(directory):
     if filename.endswith(".png"):
         img = Image.open(directory+filename)

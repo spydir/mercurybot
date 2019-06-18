@@ -4,14 +4,14 @@ from steam import steam
 from interactions import image_find
 from pyautogui import click,moveTo
 from mechanics import compass_bearing
-
-
-
+from ftl import combat
 
 
 def jump_routes():
-    future_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT.png", .9)
-    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/ftl-WAYPOINT-VISITED.png",.9)
+    logging.debug("Collecting Jump Routes.")
+    time.sleep(1)
+    future_waypoints = imagesearch.imagesearch_list("./ftl/img/map/ftl-MAP-WAYPOINT.png", .9)
+    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/map/ftl-MAP-WAYPOINT-VISITED.png",.9)
     possible_waypoints = []
     current_waypoint = tuple(visited_waypoints[-1])
 
@@ -30,26 +30,30 @@ def jump_routes():
     #match route bearings to waypoint bearings
 
 
-def start_game():
-    # select ftl
-
+def new_game():
+    #log instance id
+    gameid = "ftl:" + str(datetime.datetime.now())
+    logging.info("Game Start: {}".format(gameid))
+    logging.info("Starting New Game.")
+    # check for loading screen, when loading screen stops go to new game button.
     # select newgame
-    image_find("./ftl/img/ftl-NEWGAME.png", clicky=True)
+    time.sleep(5)
+    image_find("./ftl/img/new_game/ftl-NEWGAME.png", clicky=True, wait=5)
 
     # confirm newgame
-    image_find("./ftl/img/ftl-CONFIRM.png",clicky=True)
+    image_find("./ftl/img/new_game/ftl-NEWGAME-CONFIRM.png",clicky=True)
 
     # Start newgame
-    image_find("./ftl/img/ftl-START.png",clicky=True)
+    image_find("./ftl/img/new_game/ftl-NEWGAME-START.png",clicky=True)
 
     # Continue New Game
-    image_find("./ftl/img/ftl-CONTINUE.png",clicky=True)
+    image_find("./ftl/img/DIALOG/ftl-DIALOG-CONTINUE.png",clicky=True)
 
 
 def play_game():
-
+    logging.info("Playing Game.")
     # Jump!
-    image_find("./ftl/img/ftl-JUMP.png",clicky=True)
+    image_find("./ftl/img/HUD/ftl-JUMP.png",clicky=True)
 
     visited, future, possible = jump_routes()
 
@@ -59,23 +63,25 @@ def play_game():
 
         pause = decimal.Decimal(random.randrange(52, 87)) / 100
         time.sleep(pause)
-        if imagesearch.imagesearch("./ftl/img/ftl-WAYPOINT.png") == False:
+        if imagesearch.imagesearch("./ftl/img/map/ftl-MAP-WAYPOINT.png") == False:
             logging.info("{} Successful Jump! ".format(i))
 
             time.sleep(decimal.Decimal(random.randrange(500, 800)) / 100)
             logging.info("{} Looking for Target.".format(i))
 
-            if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == True:
+            if imagesearch.imagesearch("./ftl/img/encounter/ftl-ENCOUNTER-TARGET.png") == True:
 
                 logging.info("{} Ship Encountered. ".format(i))
                 #capture region 526x418
                 save('ship_encounters',imagesearch.region_grabber([526, 418,1730,1172]))
+                combat.ship_encouter(combat=True)
 
             time.sleep(decimal.Decimal(random.randrange(25, 39)) / 100)
-            if imagesearch.imagesearch("./ftl/img/ftl-TARGET.png") == False:
+            if imagesearch.imagesearch("./ftl/img/encounter/ftl-ENCOUNTER-TARGET.png") == False:
                 logging.info("{} No Ship Encountered. ".format(i))
                 #capture region 825x418
                 save('no_ship_encounters',imagesearch.region_grabber([825, 418,2030,1172]))
+                combat.ship_encouter(combat=True)
             restart_game()
             break
         logging.info("{} Failed Jump. ".format(i))
@@ -90,14 +96,15 @@ def play_game():
 def exit_game():
     logging.info("Clicking Exit.")
     moveTo(186/2,102/2,.3)
-    time.sleep(3)
+    time.sleep(.5)
     click(186/2,102/2,1,.2)
+    logging.info("Exiting Game.")
 
 
 def restart_game():
     exit_game()
     steam.start_steam()
-    start_game()
+    new_game()
     play_game()
 
 
@@ -106,4 +113,5 @@ def save(index, image): # here index is the class of the image eg 2,3 etc
     files = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     file_id = files.__len__()
     filename = mypath + "/" + str(file_id + 1) + ".png"
+    logging.debug("Saving Screenshot: {}".format(filename))
     image.save(filename)

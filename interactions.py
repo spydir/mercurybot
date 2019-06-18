@@ -1,6 +1,6 @@
 
 import time, random, decimal
-from imagesearch import imagesearch_loop, click_image
+from imagesearch import imagesearch_loop, click_image, imagelocate
 from pyautogui import press, moveTo, click
 from PIL import Image
 
@@ -13,15 +13,15 @@ def keyboard(key):
     # click(x=moveToX, y=moveToY, clicks=num_of_clicks, interval=secs_between_clicks, button='left')
 
 
-def image_find(image,clicky=False):
+def image_find(image,wait=2,clicky=False):
     im = Image.open(image)
     width, height = im.size
     pause = decimal.Decimal(random.randrange(35,90))/100
     # print(pause)
 
-    timeout = time.time() + 17  # 17 seconds from now
+    timeout = time.time() + wait # 17 seconds from now
     while True:
-        pos = imagesearch_loop(image,.5)
+        pos = imagelocate(image,.2)
         x = ((pos[0]/2)+(width/4))
         y = ((pos[1]/2)+(height/4))
 

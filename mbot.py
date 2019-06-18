@@ -8,7 +8,7 @@ from steam import steam
 
 
 steam.start_steam()
-ftl.start_game()
+ftl.new_game()
 ftl.play_game()
 
 
