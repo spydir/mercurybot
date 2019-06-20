@@ -2,96 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fda4624b-3c4c-4a5a-8948-03cc8b45cea9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ftl/combat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ACCEPT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ACCEPT_BRIBE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ATTACK_AUTOMATED_SHIP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ATTACK_THE_PIRATE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ATTACK_THE_SHIP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ATTACK_THE_SLAVER_SCUM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-ATTEMPT_TO_DOWNLOAD_DATA.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-AVOID_PROVOKING_SHIP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-AVOID_THE_CONFLICT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-DECLINE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-DONT_RISK_ACTIVATING.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-FIGHT_THE_SHIP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-IGNORE_THE_SLAVER_SCUM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-INGORE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-INTERVENE_TO_DEFEND_OUTPOST.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-LEAD_THEM_TO_DESTINATION.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-NO_NEED_FOR_SERVICE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-REJECT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-TRY_TO_BE_HERO_ATTACK_PIRATE.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-TURN_AND_FIGHT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/no_ship_encounters/25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/no_ship_encounters/27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/no_ship_encounters/28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/no_ship_encounters/30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/39.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ship_encounters/48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/4.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/5.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/6.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/7.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_16-55-12-654273.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_17-25-46-863801.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_17-29-53-607572.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_17-32-47-625260.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_18-00-01-272147.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot2019-0610_18-55-08-655516.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ftl/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/combat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ftl/ftl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/ftl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-ADVANCED-DISABLED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-ADVANCED-DISABLED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-ADVANCED-ENABLED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-ADVANCED-ENABLED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-CONFIRM.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-CONFIRM.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-CONTINUE.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/dialog/FTL-DIALOG-CONTINUE.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-DIF-EASY.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-DIF-EASY.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-DIF-HARD.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-DIF-HARD.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-DIF-NORMAL.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-DIF-NORMAL.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-JUMP-ROUTE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-JUMP.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/HUD/FTL-JUMP.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-NEWGAME.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-START.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-START.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-STEAM-GAME-LISTING.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/steam/FTL-STEAM-GAME-LISTING.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-STEAM-GAME-STRING.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/steam/FTL-STEAM-GAME-STRING.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-TARGET.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/encounter/FTL-ENCOUNTER-TARGET.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-WAYPOINT-VISITED.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/map/FTL-MAP-WAYPOINT-VISITED.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FTL-WAYPOINT.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/map/FTL-MAP-WAYPOINT.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FUEL-16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/HUD/FUEL-16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ftl/img/FUEL16.png" beforeDir="false" afterPath="$PROJECT_DIR$/ftl/img/HUD/FUEL16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/no_ship_encounters/16.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/no_ship_encounters/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/no_ship_encounters/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interactions.py" beforeDir="false" afterPath="$PROJECT_DIR$/interactions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/mbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/steam/steam.py" beforeDir="false" afterPath="$PROJECT_DIR$/steam/steam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,14 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="323">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#1#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,41 +29,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+            <state relative-caret-position="213">
+              <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
               <folding>
-                <element signature="e#1#71#0" expanded="true" />
-                <element signature="e#235#1079#0" />
-                <element signature="e#1082#1531#0" />
-                <element signature="e#3020#3142#0" />
-                <element signature="e#2409#2477#0" />
-                <element signature="e#3022#3232#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image_processing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/steam/steam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-              <folding>
-                <element signature="e#1#29#0" expanded="true" />
-                <element signature="e#139#573#0" />
-                <element signature="e#593#1403#0" />
+                <element signature="e#2840#3463#0" />
+                <element signature="e#3487#3958#0" />
+                <element signature="e#3906#3958#0" />
+                <element signature="e#3982#4120#0" />
               </folding>
             </state>
           </provider>
@@ -159,10 +44,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ftl/combat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="665">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+            <state relative-caret-position="418">
+              <caret line="125" column="27" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#153#3392#0" />
+                <element signature="e#527#547#0" />
+                <element signature="e#2161#2165#0" />
+                <element signature="e#3448#3797#0" />
+                <marker date="1560996576647" expanded="true" signature="4438:5104" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/steam/steam.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
+              <folding>
+                <element signature="e#1#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+              <folding>
+                <element signature="e#1#29#0" expanded="true" />
+                <element signature="e#187#365#0" />
               </folding>
             </state>
           </provider>
@@ -171,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imagesearch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1842">
-              <caret line="217" column="44" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
+            <state relative-caret-position="-821">
+              <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#75#286#1" />
@@ -182,15 +97,6 @@
                 <element signature="e#6911#7647#0" />
                 <element signature="e#7698#8191#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interactions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -214,6 +120,8 @@
       <find>steam</find>
       <find>start</find>
       <find>image_find</find>
+      <find>Ship Encountered.</find>
+      <find>contin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -229,13 +137,13 @@
         <option value="$PROJECT_DIR$/FTL/ftl.py" />
         <option value="$PROJECT_DIR$/mechanics.py" />
         <option value="$PROJECT_DIR$/imagesearch.py" />
-        <option value="$PROJECT_DIR$/mbot.py" />
         <option value="$PROJECT_DIR$/image_processing.py" />
         <option value="$PROJECT_DIR$/ftl/img/combat.py" />
-        <option value="$PROJECT_DIR$/steam/steam.py" />
         <option value="$PROJECT_DIR$/ftl/ftl.py" />
-        <option value="$PROJECT_DIR$/interactions.py" />
         <option value="$PROJECT_DIR$/ftl/combat.py" />
+        <option value="$PROJECT_DIR$/mbot.py" />
+        <option value="$PROJECT_DIR$/interactions.py" />
+        <option value="$PROJECT_DIR$/steam/steam.py" />
       </list>
     </option>
   </component>
@@ -263,12 +171,12 @@
             <path>
               <item name="mercurybot" type="b2602c69:ProjectViewProjectNode" />
               <item name="mercurybot" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mercurybot" type="b2602c69:ProjectViewProjectNode" />
               <item name="mercurybot" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="steam" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mercurybot" type="b2602c69:ProjectViewProjectNode" />
@@ -284,15 +192,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ftl" />
-      <recent name="$PROJECT_DIR$/ftl/img/steam" />
-      <recent name="$PROJECT_DIR$/ftl/img/map" />
-      <recent name="$PROJECT_DIR$/ftl/img/HUD" />
       <recent name="$PROJECT_DIR$/ftl/img/new_game" />
+      <recent name="$PROJECT_DIR$/ftl" />
+      <recent name="$PROJECT_DIR$/ftl/img/HUD" />
+      <recent name="$PROJECT_DIR$/ftl/img/dialog/unknown" />
+      <recent name="$PROJECT_DIR$/ftl/img/dialog/nocombat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -324,13 +232,9 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24947146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2896406" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -338,25 +242,29 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24947146" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Python Console" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43410853" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -380,37 +288,23 @@
           <line>196</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ftl/combat.py</url>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-49-14-096117.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-38-37-051603.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-49-26-361319.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result22.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_15-40-43-456933.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0609_16-21-51-325095.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/screenshot2019-0609_14-43-07-419114.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-49-14-096117.png" />
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-38-37-051603.png" />
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_12-49-26-361319.png" />
+    <entry file="file://$PROJECT_DIR$/result0.png" />
+    <entry file="file://$PROJECT_DIR$/result.png" />
+    <entry file="file://$PROJECT_DIR$/result22.png" />
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0608_15-40-43-456933.png" />
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0609_16-21-51-325095.png" />
+    <entry file="file://$PROJECT_DIR$/screenshot2019-0609_14-43-07-419114.png" />
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -424,9 +318,7 @@
     <entry file="file://$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME-START.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ftl/img/FTL-JUMP-ROUTE.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/img/FTL-JUMP-ROUTE.png" />
     <entry file="file://$PROJECT_DIR$/ftl/img/new_game/FTL-NEWGAME.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -455,25 +347,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/image_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
+        <state relative-caret-position="38">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interactions.py">
+    <entry file="file://$PROJECT_DIR$/logs/29.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/13.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/img/HUD/target.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/9.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
+        <state relative-caret-position="-412" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/12.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/3.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-397" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/2.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/7.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/6.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1388" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/4.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/8.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/10.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3288" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/11.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/17.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/15.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/16.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-267" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/18.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/19.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-495" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/img/weapons/burst_laser_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/img/weapons/artemis.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/20.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1256" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/img/HUD/weapons_string.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/imagesearch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1842">
-          <caret line="217" column="44" selection-start-line="217" selection-start-column="44" selection-end-line="217" selection-end-column="44" />
+        <state relative-caret-position="-821">
+          <caret line="44" column="3" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="3" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#75#286#1" />
@@ -486,49 +460,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/region.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
-          <folding>
-            <element signature="e#1#71#0" expanded="true" />
-            <element signature="e#235#1079#0" />
-            <element signature="e#1082#1531#0" />
-            <element signature="e#3020#3142#0" />
-            <element signature="e#2409#2477#0" />
-            <element signature="e#3022#3232#0" />
+            <element signature="e#1#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ftl/combat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+        <state relative-caret-position="418">
+          <caret line="125" column="27" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#153#3392#0" />
+            <element signature="e#527#547#0" />
+            <element signature="e#2161#2165#0" />
+            <element signature="e#3448#3797#0" />
+            <marker date="1560996576647" expanded="true" signature="4438:5104" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/35.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#1#29#0" expanded="true" />
+            <element signature="e#187#365#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ftl/ftl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="75" column="15" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="15" />
+          <folding>
+            <element signature="e#2840#3463#0" />
+            <element signature="e#3487#3958#0" />
+            <element signature="e#3906#3958#0" />
+            <element signature="e#3982#4120#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steam/steam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="650">
+          <caret line="54" column="74" selection-start-line="54" selection-start-column="74" selection-end-line="54" selection-end-column="74" />
           <folding>
             <element signature="e#1#29#0" expanded="true" />
-            <element signature="e#139#573#0" />
-            <element signature="e#593#1403#0" />
           </folding>
         </state>
       </provider>

@@ -2,16 +2,16 @@
 import imagesearch, math, time, decimal, random, datetime, os, logging
 from steam import steam
 from interactions import image_find
-from pyautogui import click,moveTo
+from pyautogui import click,moveTo,press
 from mechanics import compass_bearing
 from ftl import combat
 
 
-def jump_routes():
+def get_waypoints():
     logging.debug("Collecting Jump Routes.")
-    time.sleep(1)
-    future_waypoints = imagesearch.imagesearch_list("./ftl/img/map/ftl-MAP-WAYPOINT.png", .9)
-    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/map/ftl-MAP-WAYPOINT-VISITED.png",.9)
+    time.sleep(.5)
+    future_waypoints = imagesearch.imagesearch_list("./ftl/img/map/unexplored_waypoint.png", .85)
+    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/map/explored_waypoint.png",.85)
     possible_waypoints = []
     current_waypoint = tuple(visited_waypoints[-1])
 
@@ -28,6 +28,49 @@ def jump_routes():
     return visited_waypoints, future_waypoints, possible_waypoints
 
     #match route bearings to waypoint bearings
+
+
+def navigate_waypoints(waypoints):
+    if imagesearch.imagesearch("./ftl/img/map/unexplored_waypoint.png"):
+        for waypoint in waypoints:
+
+            click(waypoint[0] / 2, waypoint[1] / 2, 1, .6, 'left')
+            logging.info("{} Waypoint Clicked ".format(waypoint))
+            # need time between clickingon waypoints
+            time.sleep(decimal.Decimal(random.randrange(35, 55)) / 100)
+
+            if imagesearch.imagesearch("./ftl/img/HUD/ftl-JUMP.png") == True:
+                logging.info("{} Successful Jump! ".format(waypoint))
+                # need time for the target screen to pop up.
+                time.sleep(decimal.Decimal(random.randrange(335, 355)) / 100)
+                return waypoint, True
+
+            logging.info("{} Failed Jump. ".format(waypoint))
+            if waypoint == waypoints[-1]:
+                return waypoint, False
+
+
+def handle_encounter(waypoint):
+    encounter_type = ""
+
+    logging.info("{} Assessing encounter.".format(waypoint))
+    if imagesearch.imagesearch("./ftl/img/HUD/target.png"):
+
+        logging.info("{} Ship Encountered.".format(waypoint))
+        # capture region 526x418
+        # save('ship_encounters',imagesearch.region_grabber([526, 418,1730,1172]))
+        encounter_type = "SHIP"
+        return encounter_type
+
+
+    if imagesearch.imagesearch("./ftl/img/HUD/target.png") == False:
+
+        logging.info("{} No Ship Encountered.".format(waypoint))
+        # capture region 825x418
+        # save('no_ship_encounters',imagesearch.region_grabber([825, 418,2030,1172]))
+        # combat.non_ship_encouter()
+        encounter_type = "NOSHIP"
+        return encounter_type
 
 
 def new_game():
@@ -47,64 +90,46 @@ def new_game():
     image_find("./ftl/img/new_game/ftl-NEWGAME-START.png",clicky=True)
 
     # Continue New Game
-    image_find("./ftl/img/DIALOG/ftl-DIALOG-CONTINUE.png",clicky=True)
+    image_find("./ftl/img/DIALOG/continue.png",clicky=True)
 
 
 def play_game():
     logging.info("Playing Game.")
-    # Jump!
     image_find("./ftl/img/HUD/ftl-JUMP.png",clicky=True)
 
-    visited, future, possible = jump_routes()
+    visited, future, possible = get_waypoints()
 
-    for i in future:
-        click(i[0]/2, i[1]/2, 1, .6, 'left')
-        logging.info("{} Waypoint Clicked ".format(i))
+    waypoint, jump = navigate_waypoints(future)
 
-        pause = decimal.Decimal(random.randrange(52, 87)) / 100
-        time.sleep(pause)
-        if imagesearch.imagesearch("./ftl/img/map/ftl-MAP-WAYPOINT.png") == False:
-            logging.info("{} Successful Jump! ".format(i))
-
-            time.sleep(decimal.Decimal(random.randrange(500, 800)) / 100)
-            logging.info("{} Looking for Target.".format(i))
-
-            if imagesearch.imagesearch("./ftl/img/encounter/ftl-ENCOUNTER-TARGET.png") == True:
-
-                logging.info("{} Ship Encountered. ".format(i))
-                #capture region 526x418
-                save('ship_encounters',imagesearch.region_grabber([526, 418,1730,1172]))
-                combat.ship_encouter(combat=True)
-
-            time.sleep(decimal.Decimal(random.randrange(25, 39)) / 100)
-            if imagesearch.imagesearch("./ftl/img/encounter/ftl-ENCOUNTER-TARGET.png") == False:
-                logging.info("{} No Ship Encountered. ".format(i))
-                #capture region 825x418
-                save('no_ship_encounters',imagesearch.region_grabber([825, 418,2030,1172]))
-                combat.ship_encouter(combat=True)
+    if jump:
+        encounter = handle_encounter(waypoint)
+        if encounter == "SHIP":
+            combat.ship_encouter()
+            combat.fight()
             restart_game()
-            break
-        logging.info("{} Failed Jump. ".format(i))
-        if i == future[-1]:
+
+        if encounter != "SHIP":
             restart_game()
-            break
 
-
-    # image_find("./ftl/img/ftl-WAYPOINT.png",clicky=True)
+    else:
+        logging.info("Jump Error!")
+        # restart_game()
 
 
 def exit_game():
     logging.info("Clicking Exit.")
     moveTo(186/2,102/2,.3)
-    time.sleep(.5)
+    time.sleep(.3)
     click(186/2,102/2,1,.2)
     logging.info("Exiting Game.")
 
 
 def restart_game():
-    exit_game()
-    steam.start_steam()
-    new_game()
+    logging.info("Restarting Game.")
+    press("escape")
+    image_find("./ftl/img/new_game/restart.png", clicky=True)
+    image_find("./ftl/img/new_game/restart_yes.png", clicky=True)
+    image_find("./ftl/img/DIALOG/continue.png", clicky=True)
     play_game()
 
 

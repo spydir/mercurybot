@@ -13,7 +13,7 @@ def keyboard(key):
     # click(x=moveToX, y=moveToY, clicks=num_of_clicks, interval=secs_between_clicks, button='left')
 
 
-def image_find(image,wait=2,clicky=False):
+def image_find(image,wait=2,clicky=False,precision=.1):
     im = Image.open(image)
     width, height = im.size
     pause = decimal.Decimal(random.randrange(35,90))/100
@@ -21,7 +21,7 @@ def image_find(image,wait=2,clicky=False):
 
     timeout = time.time() + wait # 17 seconds from now
     while True:
-        pos = imagelocate(image,.2)
+        pos = imagelocate(image,.1)
         x = ((pos[0]/2)+(width/4))
         y = ((pos[1]/2)+(height/4))
 
