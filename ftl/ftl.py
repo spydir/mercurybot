@@ -10,8 +10,8 @@ from ftl import combat
 def get_waypoints():
     logging.debug("Collecting Jump Routes.")
     time.sleep(.5)
-    future_waypoints = imagesearch.imagesearch_list("./ftl/img/map/unexplored_waypoint.png", .85)
-    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/map/explored_waypoint.png",.85)
+    future_waypoints = imagesearch.imagesearch_list("./ftl/img/map/unexplored_waypoint.png", .9)
+    visited_waypoints = imagesearch.imagesearch_list("./ftl/img/map/explored_waypoint.png",.9)
     possible_waypoints = []
     current_waypoint = tuple(visited_waypoints[-1])
 
@@ -34,15 +34,16 @@ def navigate_waypoints(waypoints):
     if imagesearch.imagesearch("./ftl/img/map/unexplored_waypoint.png"):
         for waypoint in waypoints:
 
-            click(waypoint[0] / 2, waypoint[1] / 2, 1, .6, 'left')
+            moveTo(waypoint[0] / 2, waypoint[1] / 2, .2)
+            click(waypoint[0] / 2, waypoint[1] / 2, 1, .1, 'left')
             logging.info("{} Waypoint Clicked ".format(waypoint))
-            # need time between clickingon waypoints
-            time.sleep(decimal.Decimal(random.randrange(35, 55)) / 100)
+            # need time between clicking on waypoints
+            # time.sleep(decimal.Decimal(random.randrange(15, 20)) / 100)
 
             if imagesearch.imagesearch("./ftl/img/HUD/ftl-JUMP.png") == True:
                 logging.info("{} Successful Jump! ".format(waypoint))
                 # need time for the target screen to pop up.
-                time.sleep(decimal.Decimal(random.randrange(335, 355)) / 100)
+                # time.sleep(decimal.Decimal(random.randrange(135, 155)) / 100)
                 return waypoint, True
 
             logging.info("{} Failed Jump. ".format(waypoint))
@@ -106,7 +107,7 @@ def play_game():
         if encounter == "SHIP":
             combat.ship_encouter()
             combat.fight()
-            restart_game()
+            # restart_game()
 
         if encounter != "SHIP":
             restart_game()

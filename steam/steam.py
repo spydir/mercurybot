@@ -12,7 +12,7 @@ def logs():
     fname = mypath + "/" + str(file_id + 1) + ".log"
     logging.basicConfig(
         filename=fname,
-        level=logging.DEBUG,
+        level=logging.INFO,
         format="%(asctime)s:%(levelname)s:%(message)s",
         filemode = 'w'
         )
@@ -40,16 +40,16 @@ def start_steam():
 
         # start steam
         logging.debug("looking for steam icon")
-        image_find("./steam/img/STEAM-ICON.png", clicky=True, precision=.9)
+        image_find("./steam/img/STEAM-ICON.png", clicky=True)
 
         # select library
         logging.debug("looking for steam library")
-        image_find("./steam/img/STEAM-LIBRARY.png", clicky=True, precision=.9)
+        image_find("./steam/img/STEAM-LIBRARY.png", clicky=True)
 
         # select ftl
         logging.debug("looking for ftl in steam")
-        image_find("./ftl/img/steam/FTL-STEAM-GAME-LISTING.png", clicky=True, precision=.9)
+        image_find("./ftl/img/steam/FTL-STEAM-GAME-LISTING.png", clicky=True)
 
         # press play
         logging.debug("looking for play button")
-        image_find("./steam/img/STEAM-PLAY.png", clicky=True, precision=.9)
+        image_find("./steam/img/STEAM-PLAY.png", clicky=True)

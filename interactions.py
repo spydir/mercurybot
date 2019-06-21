@@ -13,7 +13,7 @@ def keyboard(key):
     # click(x=moveToX, y=moveToY, clicks=num_of_clicks, interval=secs_between_clicks, button='left')
 
 
-def image_find(image,wait=2,clicky=False,precision=.1):
+def image_find(image,wait=2,clicky=False,precision=.9):
     im = Image.open(image)
     width, height = im.size
     pause = decimal.Decimal(random.randrange(35,90))/100

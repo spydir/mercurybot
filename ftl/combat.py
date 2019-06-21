@@ -21,6 +21,7 @@ def ship_encouter(combat=True):
                     if imagesearch.imagesearch(os.path.join(directory, filename)):
                         logging.info("Found!: {}".format(filename))
                         image_find(os.path.join(directory, filename), clicky=True)
+                        break
 
                 else:
                     continue
@@ -87,11 +88,8 @@ def target_locations():
     engines = imagesearch.imagesearcharea('./ftl/img/hud/engines.png', area[0], area[1], area[2], area[3])
     # x = (enemy_weps[0]+area[0]+15)/2
     # y = (enemy_weps[1]+area[1]+15)/2
-
-    return weps, shields, engines
-
-def self_locations():
-    pass
+    enemy_weps = [(weps[0]+area[0]+15)/2,(weps[1]+area[1]+15)/2]
+    return enemy_weps, shields, engines
 
 
 def fight():
@@ -109,48 +107,29 @@ def fight():
     # power-up weapon 1
 
     # image_find("./ftl/img/weapons/artemis.png", clicky=True)
-    # logging.info("Artemis Launch powered-on")
+    logging.info("Artemis Launch powered-on")
     moveTo(w1[0],w1[1],.1)
     click(w1[0],w1[1])
-    time.sleep(.25)
+    time.sleep(1)
+    click(w1[0], w1[1])
+    time.sleep(1)
     click(weps[0], weps[1])
-    time.sleep(.25)
+    time.sleep(1)
 
     #
     # # power-up weapon 2
     # # image_find("./ftl/img/weapons/blast_laser_2.png", clicky=True)
-    # # logging.info("Blast Laser 2 powered on")
+    logging.info("Blast Laser 2 powered on")
     moveTo(w2[0], w2[1], .1)
     click(w2[0], w2[1])
-    time.sleep(.25)
+    time.sleep(1)
+    click(w2[0], w2[1])
+    time.sleep(1)
     click(weps[0], weps[1])
     time.sleep(2)
-    #
-    #
 
-    # click(w3[0], w3[1])
-    # time.sleep(.25)
-    #
-    # click(w4[0], w4[1])
-    # time.sleep(.25)
 
-    '''
-        
-        bound by target box:
-            find "target" word and build zone with top left x,y and bottom right x,y
-            within that area, find location of all systems   
-               - weapons
-               - shields
-               - engines
-               - nav
-               - 02 
-        
-            return positions of each system
-        
-        select weapon x, target system y
-        
-        
-    '''
+    # detect when fight is won
 
 
 def locations():
@@ -183,4 +162,4 @@ def locations():
     # minimize_game = Tuple(origin[0] - 49, origin[1] + 45)  # 228, 102
     # maximize_game = Tuple(origin[0] - 89, origin[1] + 45)  # 268, 102
 
-    return target_frame
+    return target_frame, jump_button
