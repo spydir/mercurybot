@@ -1,7 +1,7 @@
 
 from pyautogui import moveTo
-from imagesearch import imagesearch
-from interactions import image_find
+from utils.imagesearch import imagesearch
+from utils.interactions import image_find
 import logging, os
 
 
