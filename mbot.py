@@ -10,7 +10,7 @@ def logs():
         filename=fname,
         level=logging.INFO,
         format="%(asctime)s:%(levelname)s:%(message)s",
-        filemode = 'w'
+        filemode = 'a'
         )
 
 logs()
