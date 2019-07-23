@@ -78,3 +78,7 @@ def compass_bearing(pointA, pointB):
     compass_bearing = (initial_bearing + 360) % 360
 
     return compass_bearing
+
+def compass_distance(pointA,pointB):
+    dist = math.hypot(pointB[0] - pointA[0], pointB[1] - pointA[1])
+    return  dist

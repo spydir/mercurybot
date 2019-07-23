@@ -2,25 +2,13 @@
 from pyautogui import moveTo
 from utils.imagesearch import imagesearch
 from utils.interactions import image_find
-import logging, os
+import logging
 
 
-def logs():
-    mypath = str("logs/")
-    files = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
-    file_id = files.__len__()
-    fname = mypath + "/" + str(file_id + 1) + ".log"
-    logging.basicConfig(
-        filename=fname,
-        level=logging.INFO,
-        format="%(asctime)s:%(levelname)s:%(message)s",
-        filemode = 'w'
-        )
+
 
 
 def start_steam():
-
-    logs()
 
     # check to see if steam is open
         # Are the game string and play buttons visible?
