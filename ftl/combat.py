@@ -1,5 +1,5 @@
 from utils.interactions import image_find
-import time
+import time,datetime
 from ftl import ftl
 from pyautogui import click,moveTo
 import os, logging
@@ -7,23 +7,23 @@ from utils import imagesearch
 
 
 def ship_encounter(combat=True):
-    logging.info("Entered Ship Encounter")
+    logging.debug("combat.ship_encounter: function entered")
     dialog = True
 
     if combat:
 
         while dialog:
 
-            logging.info("Dialog loop started")
+            logging.debug("combat.ship_encounter: dialog loop started")
             image_find("./ftl/img/DIALOG/continue.png", clicky=True, precision=.8)
             directory = "/Users/lee/github/mercurybot/ftl/img/dialog/combat"
 
             for file in os.listdir(directory):
                 filename = os.fsdecode(file)
                 if filename.endswith(".png"):
-                    logging.info("Search For: {}".format(filename))
+                    logging.debug("Search For: {}".format(filename))
                     if imagesearch.imagesearch(os.path.join(directory, filename)):
-                        logging.info("Found!: {}".format(filename))
+                        logging.debug("Found!: {}".format(filename))
                         image_find(os.path.join(directory, filename), clicky=True, precision=.8)
                         break
 
@@ -31,7 +31,7 @@ def ship_encounter(combat=True):
                     continue
             time.sleep(1)
             if not imagesearch.imagesearch("./ftl/img/HUD/dialogbox_border.png"):
-                logging.info("No dialog box found")
+                logging.debug("combat.ship_enounter: no dialog box found")
                 dialog = False
 
     # if combat == True:
@@ -71,12 +71,13 @@ def ship_encounter(combat=True):
 
 
 def non_ship_encounter():
-    logging.info("Entered Non-Ship Encounter")
+    logging.debug("combat.non_ship_encounter: function entered")
     pass
 
 
 def hud_location(area):
-    logging.info("Locating: {}".format(area))
+    logging.debug("combat.hud_location: function entered")
+    logging.debug("Locating: {}".format(area))
     origin = imagesearch.imagelocate('./ftl/img/HUD/hull.png')
 
     if area == "target_frame":
@@ -115,7 +116,8 @@ def hud_location(area):
 
 
 def wep_locations(wep):
-    logging.info("Locating Weapon: {}".format(wep))
+    logging.debug("combat.wep_locations: function entered")
+    logging.debug("Locating Weapon: {}".format(wep))
     area = hud_location("weapon_bar")
     if wep == "bar":
         bar = hud_location("weapon_bar")
@@ -149,7 +151,8 @@ def wep_locations(wep):
 
 
 def target_locations():
-    logging.info("Aquiring Target.")
+    logging.debug("combat.target_locations: function entered")
+    logging.debug("Aquiring Target.")
     area = hud_location("target_frame")
     # imagesearch.region_grabber(area,"region.png")
     weps = imagesearch.imagesearcharea('./ftl/img/hud/weapons.png', area[0], area[1], area[2], area[3])
@@ -162,17 +165,18 @@ def target_locations():
 
 
 def enable_autofire():
-    logging.info("Enabling Autofire")
+    logging.debug("combat.enable_autofire: function entered")
     while True:
         image_find("./ftl/img/hud/autofire_disabled.png", clicky=True,precision=.88)
         if imagesearch.imagesearch("./ftl/img/hud/autofire_enabled.png"):
-            logging.info("Autofire enabled")
+            logging.debug("{} enable_autofire: image found".format(datetime.datetime))
             time.sleep(.25)
             break
 
 
 def weapon_status(weapon):
-    logging.info("Checking Weapon Status: {}".format(weapon))
+    logging.debug("combat.weapon_status: function entered")
+    logging.debug("Checking Weapon Status: {}".format(weapon))
     area = wep_locations(weapon)
     time.sleep(1)
     # print(weapon, "disabled:",x imagesearch.imagesearcharea("./ftl/img/hud/weapon_disabled.png", area[0], area[1], area[2], area[3],.9) != [-1,-1])
@@ -186,7 +190,8 @@ def weapon_status(weapon):
 
 
 def enable_weapon(weapon):
-    logging.info("Attempting to enable Weapon: ", weapon)
+    logging.debug("combat.enable_weapon: function entered")
+    logging.debug("Attempting to enable Weapon: ", weapon)
     pos = wep_locations(weapon)
     moveTo(pos[0]/2+25, pos[1]/2+25, .1)
 
@@ -198,17 +203,17 @@ def enable_weapon(weapon):
         moveTo(pos[0] / 2 - 25, pos[1] / 2 - 25, .1)
 
         if weapon_status(weapon) != "DISABLED":
-            logging.info("Successfully Enabled Weapon: ", weapon)
+            logging.debug("Successfully Enabled Weapon: ", weapon)
             moveTo(pos[0] / 2 + 25, pos[1] / 2 + 25, .1)
             click(pos[0] / 2 + 25, pos[1] / 2 + 25, clicks=1)
             time.sleep(.25)
             break
 
-        logging.info("Failure to Enable Weapon: ", weapon)
+        logging.debug("Failure to Enable Weapon: ", weapon)
 
 
 def fight():
-    logging.info("Joining the Fight!")
+    logging.debug("combat.fight: function entered")
 
     weps,shield,engines = target_locations()
 
